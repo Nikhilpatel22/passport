@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<h1>Register User</h1>
+<% if(typeof err != 'undefined') {%>
+<h1><%= err %></h1>
+<% } %>
+<form action="/register" method="POST">
+	<div>
+		<input type="text" name="fname" placeholder="Firstname" value="<%= typeof fname != 'undefined' ? fname : '' %>">
+	</div>
+	<div>
+		<input type="text" name="lname" placeholder="Lastname" value="<%= typeof lname != 'undefined' ? lname : '' %>">
+	</div>
+	<div>
+		<input type="text" name="email" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+	</div>
+	<div>
+		<input type="text" name="password" placeholder="Password">
+	</div>
+	<div>
+		<input type="text" name="cpassword" placeholder="Confirm Password">
+	</div>
+	<div>
+		<input type="submit" name="register" value="register">
+	</div>
+</form>
+Allready register ? 
+<a href="/login">login</a>
+</body>
+</html>

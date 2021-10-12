@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<h1>Login User</h1>
+<% if(success_message != '') { %>
+<h1><%= success_message %></h1>
+<%}%>
+<% if(error != '') {%>
+<h1><%= error %></h1>
+<% } %>
+<form action="/login" method="POST">
+	<div>
+		<input type="email" name="email" placeholder="Email">
+	</div>
+	<div>
+		<input type="text" name="password" placeholder="Password">
+	</div>
+	
+	<div>
+		<input type="submit" name="login" value="login">
+	</div>
+</form>
+</body>
+</html>
